@@ -1,0 +1,8 @@
+input_hdf5: "matrix_and_eigens.h5"
+output_hdf5: "statevector_qpe.h5"
+
+qpe_params:
+  nq_matrix : 2
+  nq_measure: 2
+  target_eigen_index: 0
+
