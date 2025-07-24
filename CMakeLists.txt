@@ -37,7 +37,7 @@ target_link_libraries(
     custatevec
     HDF5::HDF5
     hdf5::hdf5_cpp
-    yaml-cpp
+    yaml-cpp::yaml-cpp
 )
 
 

@@ -5,8 +5,9 @@ Quantum Phase Estimation (QPE) emulator on NVIDIA GPU
 
 1. Install the followings
 - [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit)
-- [HDF5](https://www.hdfgroup.org/download-hdf5/)
+- [NVIDIA HPC SDK](https://developer.nvidia.com/hpc-sdk)
 - [cuQuantum](https://developer.nvidia.com/cuquantum-sdk)
+- [HDF5](https://www.hdfgroup.org/download-hdf5/)
 - [yaml-cpp](https://github.com/jbeder/yaml-cpp)
 
 2. Set the environment variables
