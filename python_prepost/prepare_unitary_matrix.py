@@ -1,6 +1,7 @@
 import numpy as np
 import h5py
 import yaml
+from qiskit.quantum_info import random_unitary
 
 
 if __name__ == '__main__':
@@ -17,16 +18,8 @@ if __name__ == '__main__':
     eigs = np.exp(1j * 2.0 * np.pi * phis)
     u_diag = np.diag(eigs)
 
-    P = np.zeros_like(u_diag)
-    v_base = np.zeros(n_size)
-
-    for i in range(n_size):
-        v_base[i] = 1.0
-        P[:, i] = v_base[:]
-
-    print(P)
-
-    u_target = (P @ u_diag) @ np.linalg.inv(P)
+    u_random = random_unitary(n_size, seed=12345)
+    u_target = (u_random.data @ u_diag) @ u_random.adjoint().data
 
     w, vec = np.linalg.eig(u_target)
 
@@ -39,6 +32,7 @@ if __name__ == '__main__':
         print('Eigen value : {0:.6f} {1:+.6f}i'.format(eig.real, eig.imag))
         print('Eigen vector [{0:d}]: {1:.6f} {2:+.6f}i'.format(i, eigv[0].real, eigv[0].imag))
         print('Ref. phase : {:.8f}'.format(norm_phase))
+        phis[i] = norm_phase
 
 
     if n_qt < 5:
