@@ -8,7 +8,7 @@ Quantum Phase Estimation (QPE) emulator on NVIDIA GPU
 - [NVIDIA HPC SDK](https://developer.nvidia.com/hpc-sdk)
 - [cuQuantum](https://developer.nvidia.com/cuquantum-sdk)
 - [HDF5](https://www.hdfgroup.org/download-hdf5/)
-- [yaml-cpp](https://github.com/jbeder/yaml-cpp)
+- [yaml-cpp](https://github.com/jbeder/yaml-cpp): version 0.8.0 or higher
 
 2. Set the environment variables
 - "HDF5_ROOT" : path to cmake configuration files of HDF5 library
